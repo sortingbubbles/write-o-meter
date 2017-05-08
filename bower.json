@@ -1,0 +1,24 @@
+{
+  "name": "write-o-meter",
+  "homepage": "https://github.com/sortingbubbles/write-o-meter",
+  "authors": [
+    "Annie Chatsa <sortingbubbles@users.noreply.github.com>"
+  ],
+  "description": "a text analysis tool for quality writing",
+  "main": "index.html",
+  "keywords": [
+    "text-analysis"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
