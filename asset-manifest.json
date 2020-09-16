@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/write-o-meter/static/css/main.54d98e33.chunk.css",
+    "main.js": "/write-o-meter/static/js/main.22b3d091.chunk.js",
+    "main.js.map": "/write-o-meter/static/js/main.22b3d091.chunk.js.map",
+    "runtime-main.js": "/write-o-meter/static/js/runtime-main.8398692c.js",
+    "runtime-main.js.map": "/write-o-meter/static/js/runtime-main.8398692c.js.map",
+    "static/js/2.3a02bd01.chunk.js": "/write-o-meter/static/js/2.3a02bd01.chunk.js",
+    "static/js/2.3a02bd01.chunk.js.map": "/write-o-meter/static/js/2.3a02bd01.chunk.js.map",
+    "index.html": "/write-o-meter/index.html",
+    "precache-manifest.239ce490b6ff59f46255731db9b614fd.js": "/write-o-meter/precache-manifest.239ce490b6ff59f46255731db9b614fd.js",
+    "service-worker.js": "/write-o-meter/service-worker.js",
+    "static/css/main.54d98e33.chunk.css.map": "/write-o-meter/static/css/main.54d98e33.chunk.css.map",
+    "static/js/2.3a02bd01.chunk.js.LICENSE.txt": "/write-o-meter/static/js/2.3a02bd01.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8398692c.js",
+    "static/js/2.3a02bd01.chunk.js",
+    "static/css/main.54d98e33.chunk.css",
+    "static/js/main.22b3d091.chunk.js"
+  ]
+}
