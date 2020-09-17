@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <form>
-          <h1>write-o-meter</h1>
+          <h1>Γραφῶμετρο</h1>
           <textarea></textarea> 
         </form>
 
