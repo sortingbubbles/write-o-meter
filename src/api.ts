@@ -4,6 +4,8 @@ export function analyze(text: string) {
   return fetch(
     `${API_HOST}/analyse`, {
     method: 'POST',
-    body: JSON.stringify(text),
+    body: JSON.stringify({
+      text
+    }),
   })
 }
