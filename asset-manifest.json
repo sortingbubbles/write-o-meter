@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/write-o-meter/static/css/main.ff4afba0.chunk.css",
-    "main.js": "/write-o-meter/static/js/main.01225324.chunk.js",
-    "main.js.map": "/write-o-meter/static/js/main.01225324.chunk.js.map",
+    "main.js": "/write-o-meter/static/js/main.dfd576dd.chunk.js",
+    "main.js.map": "/write-o-meter/static/js/main.dfd576dd.chunk.js.map",
     "runtime-main.js": "/write-o-meter/static/js/runtime-main.8398692c.js",
     "runtime-main.js.map": "/write-o-meter/static/js/runtime-main.8398692c.js.map",
     "static/js/2.2bdaa606.chunk.js": "/write-o-meter/static/js/2.2bdaa606.chunk.js",
     "static/js/2.2bdaa606.chunk.js.map": "/write-o-meter/static/js/2.2bdaa606.chunk.js.map",
     "index.html": "/write-o-meter/index.html",
-    "precache-manifest.6603ed6987465b4b6a69f46fcdca36cf.js": "/write-o-meter/precache-manifest.6603ed6987465b4b6a69f46fcdca36cf.js",
+    "precache-manifest.0b48f5f89ea9d027a131f4814a7baa2f.js": "/write-o-meter/precache-manifest.0b48f5f89ea9d027a131f4814a7baa2f.js",
     "service-worker.js": "/write-o-meter/service-worker.js",
     "static/css/main.ff4afba0.chunk.css.map": "/write-o-meter/static/css/main.ff4afba0.chunk.css.map",
     "static/js/2.2bdaa606.chunk.js.LICENSE.txt": "/write-o-meter/static/js/2.2bdaa606.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.8398692c.js",
     "static/js/2.2bdaa606.chunk.js",
     "static/css/main.ff4afba0.chunk.css",
-    "static/js/main.01225324.chunk.js"
+    "static/js/main.dfd576dd.chunk.js"
   ]
 }
