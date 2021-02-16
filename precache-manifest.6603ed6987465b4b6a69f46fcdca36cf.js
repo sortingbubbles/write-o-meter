@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c14f958f8ebbc8402ffa7ed8890fc245",
+    "revision": "532414a8365d51476de445df990c847d",
     "url": "/write-o-meter/index.html"
   },
   {
-    "revision": "a03d9e6fa668924895e9",
+    "revision": "1758107ad1460e508080",
     "url": "/write-o-meter/static/css/main.ff4afba0.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/write-o-meter/static/js/2.2bdaa606.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a03d9e6fa668924895e9",
-    "url": "/write-o-meter/static/js/main.74a03176.chunk.js"
+    "revision": "1758107ad1460e508080",
+    "url": "/write-o-meter/static/js/main.01225324.chunk.js"
   },
   {
     "revision": "2d915d5cfaa20a927df0",
