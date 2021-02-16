@@ -6,6 +6,7 @@ class WriteOMeterForm extends React.Component {
     super(props)
     this.state = {
       value: 'Γράψτε εδώ το κείμενο προς ανάλυση.',
+      results: null
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -16,30 +17,30 @@ class WriteOMeterForm extends React.Component {
     this.setState({ value: event.target.value })
   }
 
-  showResults(results) {
-    if (results) {
-      return <p>Αποτελέσματα: {results}</p>
-    }
+  showResults() {
+    if (this.state.results) return <p>Αποτελέσματα: {this.state.results}</p>
   }
 
   async handleSubmit(event) {
     event.preventDefault()
     try {
       const response = await analyze(this.state.value)
-      console.log(response)
-      this.showResults(response)
+      const data = await response.json()
+      this.setState({ results: data })
     } catch (e) {
       console.error(e)
     }
   }
 
   render() {
+    const hasResults = !!this.state.results
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
           <textarea value={this.state.value} onChange={this.handleChange} />{' '}
         </label>
         <input type="submit" value="Aνάλυση" />
+        {hasResults && this.showResults()}
       </form>
     )
   }
