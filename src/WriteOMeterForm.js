@@ -18,15 +18,24 @@ class WriteOMeterForm extends React.Component {
   }
 
   showResults() {
-    if (this.state.results) return <p>Αποτελέσματα: {this.state.results}</p>
+    if (this.state.results) return (
+      <div>
+        <p>
+          Προτάσεις: {this.state.results.sents.length}
+        </p>
+        <p>
+          Λέξεις: {this.state.results.words.length}
+        </p>
+      </div>
+    )
   }
 
   async handleSubmit(event) {
     event.preventDefault()
     try {
       const response = await analyze(this.state.value)
-      const data = await response.json()
-      this.setState({ results: data })
+      const results = await response.json()
+      this.setState({ results })
     } catch (e) {
       console.error(e)
     }
