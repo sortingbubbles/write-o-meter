@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+body {
+  background-color: #63768D;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -24,24 +28,23 @@ form textarea {
   overflow: auto;
   outline: none;
   resize: none;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-shadow: 1px 1px 1px #999;
+  border-radius: 10px;
+  border: none;
+  padding: 24px;
+  margin: 24px;
+  font-family: sans-serif;
 }
 
 form  {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 800px;
   margin: 0 auto;
 }
 
 input  {
   margin: 12px;
   width: 200px;
-  height: 26px;
-  background-color: gray;
   color: white;
   border-radius: 4px;
   outline: none;
@@ -49,6 +52,106 @@ input  {
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
+}
+
+.wom-form__controls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.wom-form__controls__method-options {
+  background-color: #8AC6D0;
+  border-radius: 10px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13);
+  text-align: left;
+  max-width: 300px;
+  max-height: 110px;
+  margin-top: 24px;
+}
+
+.wom-form__controls__method-options h3 {
+  margin-top: 0;
+}
+
+.wom-form__controls__method-options input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.wom-form__controls__method-options {
+  padding: 24px;
+}
+
+.wom-form__controls__method-options label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.wom-form__controls__method-options label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.wom-form__controls__method-options__radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #B8F3FF;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.wom-form__controls__method-options label:hover input ~ .wom-form__controls__method-options__radio {
+  background-color: #63768D;
+}
+
+/* When the radio button is checked, add a blue background */
+.wom-form__controls__method-options label input:checked ~ .wom-form__controls__method-options__radio {
+  background-color: #554971;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.wom-form__controls__method-options__radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.wom-form__controls__method-options label input:checked ~ .wom-form__controls__method-options__radio:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.wom-form__controls__method-options label .wom-form__controls__method-options__radio:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+.wom-form__input {
+  background-color: #554971;
+  padding: 12px;
+}
+
+.wom-form__input:hover {
+  background-color: #36213E;
 }
 
 .App-link {
