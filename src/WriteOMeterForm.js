@@ -1,5 +1,5 @@
 import React from 'react'
-import { analyze } from './api.ts'
+import { analyzeWithCustomAlgorithms, analyzeWithSpacy } from './api.ts'
 
 class WriteOMeterForm extends React.Component {
   constructor(props) {
@@ -36,7 +36,12 @@ class WriteOMeterForm extends React.Component {
   async handleSubmit(event) {
     event.preventDefault()
     try {
-      const response = await analyze(this.state.value)
+      let response
+      if (this.method === 'spacy-lib') {
+        response = await analyzeWithSpacy(this.state.value)
+      } else {
+        response = await analyzeWithCustomAlgorithms(this.state.value)
+      }
       const results = await response.json()
       this.setState({ results })
     } catch (e) {
@@ -46,7 +51,6 @@ class WriteOMeterForm extends React.Component {
 
   render() {
     const hasResults = !!this.state.results
-    const isUsingSpacyLibrary = this.state.isUsingSpacyLib
     return (
       <form className="wom-form" onSubmit={this.handleSubmit}>
         <section className="wom-form__controls">
