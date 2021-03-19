@@ -37,7 +37,7 @@ class WriteOMeterForm extends React.Component {
     event.preventDefault()
     try {
       let response
-      if (this.method === 'spacy-lib') {
+      if (this.state.method === 'spacy-lib') {
         response = await analyzeWithSpacy(this.state.value)
       } else {
         response = await analyzeWithCustomAlgorithms(this.state.value)

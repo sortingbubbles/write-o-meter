@@ -1,5 +1,5 @@
-// export const API_HOST = 'https://vzjega.deta.dev'
-export const API_HOST = 'http://localhost:8000'
+export const API_HOST = 'https://vzjega.deta.dev'
+// export const API_HOST = 'http://localhost:8000'
 
 export function analyzeWithSpacy(text: string) {
   return fetch(`${API_HOST}/analyze-spacy`, {
