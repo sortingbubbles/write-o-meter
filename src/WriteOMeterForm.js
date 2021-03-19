@@ -12,6 +12,7 @@ class WriteOMeterForm extends React.Component {
     this.handleChange = this.handleChange.bind(this)
     this.handleAnalysisMethodChange = this.handleAnalysisMethodChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.getClassByPartOfSpeech = this.getClassByPartOfSpeech.bind(this)
     this.showResults = this.showResults.bind(this)
   }
 
@@ -23,14 +24,39 @@ class WriteOMeterForm extends React.Component {
     this.setState({ method: event.target.value })
   }
 
-  showResults() {
-    if (this.state.results)
+  getClassByPartOfSpeech(pos) {
+    return `wom-text__${pos.toLowerCase()}`
+  }
+
+  showStatisticResults() {
+    if (this.state.results) {
       return (
-        <div>
+        <section className="wom-form__controls__method-options">
+          <h3>Μερικά Αποτελέσματα</h3>
           <p>Προτάσεις: {this.state.results.sents.length}</p>
           <p>Λέξεις: {this.state.results.words.length}</p>
-        </div>
+        </section>
       )
+    }
+  }
+  showResults() {
+    if (this.state.results && this.state.results.tokens) {
+      return (
+        <p class="text-results">
+            {this.state.results.tokens.map((token, index) => {
+              const classForToken = this.getClassByPartOfSpeech(token.pos)
+              return (
+                <span key={token.start}>
+                  <span className={`wom-text ${classForToken}`}>
+                    {this.state.results.texts[index]}
+                    <sub> { token.pos }</sub>
+                  </span>{' '}
+                </span>
+              )
+            })}
+        </p>
+      )
+    }
   }
 
   async handleSubmit(event) {
@@ -57,32 +83,35 @@ class WriteOMeterForm extends React.Component {
           <label className="wom-form__text-area">
             <textarea value={this.state.value} onChange={this.handleChange} />
           </label>
-          <section className="wom-form__controls__method-options">
-            <h3>Ανάλυση με</h3>
-            <p>
-              <label>
-                τη βιβλιοθήκη SpaCy
-                <input
-                  type="radio"
-                  value="spacy-lib"
-                  checked={this.state.method === 'spacy-lib'}
-                  onChange={this.handleAnalysisMethodChange}
-                />
-                <span className="wom-form__controls__method-options__radio"></span>
-              </label>
-            </p>
-            <p>
-              <label>
-                τους αλγορίθμους γραμματικής
-                <input
-                  type="radio"
-                  value="grammatical-algorithms"
-                  checked={this.state.method === 'grammatical-algorithms'}
-                  onChange={this.handleAnalysisMethodChange}
-                />
-                <span className="wom-form__controls__method-options__radio"></span>
-              </label>
-            </p>
+          <section>
+            <section className="wom-form__controls__method-options">
+              <h3>Ανάλυση με</h3>
+              <p>
+                <label>
+                  τη βιβλιοθήκη SpaCy
+                  <input
+                    type="radio"
+                    value="spacy-lib"
+                    checked={this.state.method === 'spacy-lib'}
+                    onChange={this.handleAnalysisMethodChange}
+                  />
+                  <span className="wom-form__controls__method-options__radio"></span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  τους αλγορίθμους γραμματικής
+                  <input
+                    type="radio"
+                    value="grammatical-algorithms"
+                    checked={this.state.method === 'grammatical-algorithms'}
+                    onChange={this.handleAnalysisMethodChange}
+                  />
+                  <span className="wom-form__controls__method-options__radio"></span>
+                </label>
+              </p>
+            </section>
+            {hasResults && this.showStatisticResults()}
           </section>
         </section>
         <input className="wom-form__input" type="submit" value="Aνάλυση" />

@@ -1,9 +1,9 @@
-.App {
-  text-align: center;
-}
-
 body {
   background-color: #63768D;
+}
+
+h1 {
+  text-align: center;
 }
 
 .App-logo {
@@ -158,11 +158,164 @@ input  {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.wom-text__x {
+  background-color: #b0d7b8;
 }
+
+.wom-text__verb {
+  background-color: #3b33cf;
+}
+
+.wom-text__sym {
+  background-color: #37726a;
+}
+
+.wom-text__sconj {
+  background-color: #b116d5;
+}
+
+.wom-text__punct {
+  background-color: #ada681;
+}
+
+.wom-text__propn {
+  background-color: #cf2943;
+}
+
+.wom-text__pron {
+  background-color: #676f68;
+}
+
+.wom-text__part {
+  background-color: #5284cf;
+}
+
+.wom-text__num {
+  background-color: #804f01;
+}
+
+.wom-text__noun {
+  background-color: #119898;
+}
+
+.wom-text__noun {
+  background-color: #ca7d6f;
+}
+
+.wom-text__intj {
+  background-color: #e0e046;
+}
+
+.wom-text__det {
+  background-color: #a8dadf;
+}
+
+.wom-text__conj {
+  background-color: #e4c216;
+}
+
+.wom-text__aux {
+  background-color: #2a1aa3;
+}
+
+.wom-text__adv {
+  background-color: #450a54;
+}
+
+.wom-text__adp {
+  background-color: #b25e77;
+}
+
+.wom-text__adj {
+  background-color: #730f0c;
+}
+
+.wom-text {
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.wom-text__x {
+  background-color: #b0d7b8;
+}
+
+.wom-text__verb {
+  background-color: #3b33cf;
+}
+
+.wom-text__sym {
+  background-color: #37726a;
+}
+
+.wom-text__sconj {
+  background-color: #b116d5;
+}
+
+.wom-text__punct {
+  background-color: #ada681;
+}
+
+.wom-text__propn {
+  background-color: #cf2943;
+}
+
+.wom-text__pron {
+  background-color: #676f68;
+}
+
+.wom-text__part {
+  background-color: #5284cf;
+}
+
+.wom-text__num {
+  background-color: #804f01;
+}
+
+.wom-text__noun {
+  background-color: #119898;
+}
+
+.wom-text__noun {
+  background-color: #ca7d6f;
+}
+
+.wom-text__intj {
+  background-color: #e0e046;
+}
+
+.wom-text__det {
+  background-color: #a8dadf;
+}
+
+.wom-text__conj {
+  background-color: #e4c216;
+}
+
+.wom-text__aux {
+  background-color: #2a1aa3;
+}
+
+.wom-text__adv {
+  background-color: #450a54;
+}
+
+.wom-text__adp {
+  background-color: #b25e77;
+}
+
+
+
+.text-results {
+  width: 800px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 0;
+}
+
+sub {
+  margin-left: 4px;
+  font-size: 12px;
+}
+
