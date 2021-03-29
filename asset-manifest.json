@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/write-o-meter/static/css/main.fd654e0e.chunk.css",
-    "main.js": "/write-o-meter/static/js/main.24991cf2.chunk.js",
-    "main.js.map": "/write-o-meter/static/js/main.24991cf2.chunk.js.map",
+    "main.css": "/write-o-meter/static/css/main.baa11eec.chunk.css",
+    "main.js": "/write-o-meter/static/js/main.dc34bb59.chunk.js",
+    "main.js.map": "/write-o-meter/static/js/main.dc34bb59.chunk.js.map",
     "runtime-main.js": "/write-o-meter/static/js/runtime-main.8398692c.js",
     "runtime-main.js.map": "/write-o-meter/static/js/runtime-main.8398692c.js.map",
     "static/js/2.2bdaa606.chunk.js": "/write-o-meter/static/js/2.2bdaa606.chunk.js",
     "static/js/2.2bdaa606.chunk.js.map": "/write-o-meter/static/js/2.2bdaa606.chunk.js.map",
     "index.html": "/write-o-meter/index.html",
-    "precache-manifest.09818490ec89fbd5da752f2990aa33b3.js": "/write-o-meter/precache-manifest.09818490ec89fbd5da752f2990aa33b3.js",
+    "precache-manifest.50a73e78a084b72f362762da72fdd2df.js": "/write-o-meter/precache-manifest.50a73e78a084b72f362762da72fdd2df.js",
     "service-worker.js": "/write-o-meter/service-worker.js",
-    "static/css/main.fd654e0e.chunk.css.map": "/write-o-meter/static/css/main.fd654e0e.chunk.css.map",
+    "static/css/main.baa11eec.chunk.css.map": "/write-o-meter/static/css/main.baa11eec.chunk.css.map",
     "static/js/2.2bdaa606.chunk.js.LICENSE.txt": "/write-o-meter/static/js/2.2bdaa606.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8398692c.js",
     "static/js/2.2bdaa606.chunk.js",
-    "static/css/main.fd654e0e.chunk.css",
-    "static/js/main.24991cf2.chunk.js"
+    "static/css/main.baa11eec.chunk.css",
+    "static/js/main.dc34bb59.chunk.js"
   ]
 }
