@@ -1,6 +1,27 @@
 import React from 'react'
 import { analyzeWithCustomAlgorithms, analyzeWithSpacy } from './api.ts'
 
+
+const partsOfSpeech = {
+  ADJ: 'επίθετο',
+  ADP: 'πρόθεση',
+  ADV: 'επίρρημα',
+  AUX: 'βοηθητικό ρήμα',
+  CONJ: 'σύνδεσμος',
+  DET: 'άρθρο',
+  INTJ: 'επιφώνημα',
+  NOUN: 'ουσιαστικό',
+  NUM: 'αριθμός',
+  PART: 'σωματίδιο',
+  PRON: 'αντωνυμία',
+  PROPN: 'κύριο όνομα',
+  PUNCT: 'στίξη',
+  SCONJ: 'δευτερεύουσα σύνδεση',
+  SYM: 'σύμβολο',
+  VERB: 'ρήμα',
+  X: 'άλλο',
+}
+
 class WriteOMeterForm extends React.Component {
   constructor(props) {
     super(props)
@@ -49,7 +70,7 @@ class WriteOMeterForm extends React.Component {
                 <span key={token.start}>
                   <span className={`wom-text ${classForToken}`}>
                     {this.state.results.texts[index]}
-                    <sub> { token.pos }</sub>
+                    <sub> { partsOfSpeech[token.pos] }</sub>
                   </span>{' '}
                 </span>
               )
