@@ -158,7 +158,6 @@ input  {
   color: #61dafb;
 }
 
-
 .wom-text__x {
   background-color: #b0d7b8;
 }
@@ -234,6 +233,9 @@ input  {
 .wom-text {
   padding: 4px;
   border-radius: 4px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+  display: inline-block;
 }
 
 .wom-text__x {
@@ -302,6 +304,26 @@ input  {
 
 .wom-text__adp {
   background-color: #b25e77;
+}
+
+.wom-text__abbr {
+  background-color: #a22ef7;
+}
+
+.wom-text__abbr {
+  background-color: #a22ef7;
+}
+
+.wom-text__other {
+  background-color: grey;
+}
+
+.wom-text__partcp {
+  background-color: blue;
+}
+
+.wom-text__cconj {
+  background-color: yellow;
 }
 
 
