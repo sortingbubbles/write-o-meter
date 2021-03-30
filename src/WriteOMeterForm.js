@@ -8,6 +8,9 @@ const partsOfSpeech = {
   ADV: 'επίρρημα',
   AUX: 'βοηθητικό ρήμα',
   CONJ: 'σύνδεσμος',
+  CCONJ: 'σύνδεσμος',
+  PARTCP: 'μετοχή',
+  ABBR: 'συντομογραφία',
   DET: 'άρθρο',
   INTJ: 'επιφώνημα',
   NOUN: 'ουσιαστικό',
@@ -18,6 +21,7 @@ const partsOfSpeech = {
   PUNCT: 'στίξη',
   SCONJ: 'δευτερεύουσα σύνδεση',
   SYM: 'σύμβολο',
+  OTHER: 'άλλο',
   VERB: 'ρήμα',
   X: 'άλλο',
 }
@@ -55,7 +59,7 @@ class WriteOMeterForm extends React.Component {
         <section className="wom-form__controls__method-options">
           <h3>Μερικά Αποτελέσματα</h3>
           <p>Προτάσεις: {this.state.results.sents.length}</p>
-          <p>Λέξεις: {this.state.results.words.length}</p>
+          <p>Λέξεις: {this.state.results.words}</p>
         </section>
       )
     }
@@ -67,11 +71,12 @@ class WriteOMeterForm extends React.Component {
             {this.state.results.tokens.map((token, index) => {
               const classForToken = this.getClassByPartOfSpeech(token.pos)
               return (
-                <span key={token.start}>
-                  <span className={`wom-text ${classForToken}`}>
-                    {this.state.results.texts[index]}
-                    <sub> { partsOfSpeech[token.pos] }</sub>
-                  </span>{' '}
+                <span
+                  key={token.start}
+                    className={`wom-text ${classForToken}`}
+                >
+                  {this.state.results.texts[index]}
+                  <sub> {partsOfSpeech[token.pos]}</sub>
                 </span>
               )
             })}
