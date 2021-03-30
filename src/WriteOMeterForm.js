@@ -33,12 +33,14 @@ class WriteOMeterForm extends React.Component {
       value: 'Γράψτε εδώ το κείμενο προς ανάλυση.',
       method: 'spacy-lib',
       results: null,
+      isLoading: false
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleAnalysisMethodChange = this.handleAnalysisMethodChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.getClassByPartOfSpeech = this.getClassByPartOfSpeech.bind(this)
     this.showResults = this.showResults.bind(this)
+    this.showLoadingState = this.showLoadingState.bind(this)
   }
 
   handleChange(event) {
@@ -85,10 +87,22 @@ class WriteOMeterForm extends React.Component {
     }
   }
 
+  showLoadingState() {
+    return (
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    )
+  }
+
   async handleSubmit(event) {
     event.preventDefault()
     try {
       let response
+      this.setState({isLoading: true})
       if (this.state.method === 'spacy-lib') {
         response = await analyzeWithSpacy(this.state.value)
       } else {
@@ -98,11 +112,14 @@ class WriteOMeterForm extends React.Component {
       this.setState({ results })
     } catch (e) {
       console.error(e)
+    } finally {
+      this.setState({ isLoading: false })
     }
   }
 
   render() {
     const hasResults = !!this.state.results
+    const isLoading = this.state.isLoading
     return (
       <form className="wom-form" onSubmit={this.handleSubmit}>
         <section className="wom-form__controls">
@@ -140,7 +157,8 @@ class WriteOMeterForm extends React.Component {
             {hasResults && this.showStatisticResults()}
           </section>
         </section>
-        <input className="wom-form__input" type="submit" value="Aνάλυση" />
+        <input disabled={this.state.isLoading} className="wom-form__input" type="submit" value="Aνάλυση" />
+        {isLoading && this.showLoadingState()}
         {hasResults && this.showResults()}
       </form>
     )
