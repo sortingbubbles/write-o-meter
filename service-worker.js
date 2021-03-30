@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/write-o-meter/precache-manifest.0808a5ae83ea5c1ec0106b180055b140.js"
+  "/write-o-meter/precache-manifest.ba20bd4ef561ec2fcf61661e7127e9b4.js"
 );
 
 self.addEventListener('message', (event) => {
