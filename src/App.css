@@ -118,29 +118,24 @@ input  {
   border-radius: 50%;
 }
 
-/* On mouse-over, add a grey background color */
 .wom-form__controls__method-options label:hover input ~ .wom-form__controls__method-options__radio {
   background-color: #63768D;
 }
 
-/* When the radio button is checked, add a blue background */
 .wom-form__controls__method-options label input:checked ~ .wom-form__controls__method-options__radio {
   background-color: #554971;
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
 .wom-form__controls__method-options__radio:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the indicator (dot/circle) when checked */
 .wom-form__controls__method-options label input:checked ~ .wom-form__controls__method-options__radio:after {
   display: block;
 }
 
-/* Style the indicator (dot/circle) */
 .wom-form__controls__method-options label .wom-form__controls__method-options__radio:after {
  	top: 9px;
 	left: 9px;
@@ -309,10 +304,6 @@ input  {
 
 .wom-text__adp {
   background-color: #b25e77;
-}
-
-.wom-text__abbr {
-  background-color: #a22ef7;
 }
 
 .wom-text__abbr {
