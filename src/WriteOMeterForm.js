@@ -1,30 +1,6 @@
 import React from 'react'
 import { analyzeWithCustomAlgorithms, analyzeWithSpacy } from './api.ts'
-
-
-const partsOfSpeech = {
-  ADJ: 'επίθετο',
-  ADP: 'πρόθεση',
-  ADV: 'επίρρημα',
-  AUX: 'βοηθητικό ρήμα',
-  CONJ: 'σύνδεσμος',
-  CCONJ: 'σύνδεσμος',
-  PARTCP: 'μετοχή',
-  ABBR: 'συντομογραφία',
-  DET: 'άρθρο',
-  INTJ: 'επιφώνημα',
-  NOUN: 'ουσιαστικό',
-  NUM: 'αριθμός',
-  PART: 'σωματίδιο',
-  PRON: 'αντωνυμία',
-  PROPN: 'κύριο όνομα',
-  PUNCT: 'στίξη',
-  SCONJ: 'δευτερεύουσα σύνδεση',
-  SYM: 'σύμβολο',
-  OTHER: 'άλλο',
-  VERB: 'ρήμα',
-  X: 'άλλο',
-}
+import { partsOfSpeech } from './parts-of-speech.ts'
 
 class WriteOMeterForm extends React.Component {
   constructor(props) {
